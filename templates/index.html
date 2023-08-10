@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Interval Timer</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body class="timer0-bg">
+
+    <div class="timerui-bg">
+        <h1 id="stateLabel">POPPER TIMER</h1>
+
+        <div id="config">
+            <h3>Rest time interval</h3>
+            <label for="minTime1">Minutes Min:</label>
+            <input type="number" id="minTime1" value="3">
+            <label for="maxTime1">Minutes Max:</label>
+            <input type="number" id="maxTime1" value="5">
+
+            <h3>Prep time</h3>
+            <label for="minTime2">Seconds:</label>
+            <input type="number" id="Time2" value="10">
+
+            <h3>Hit time interval</h3>
+            <label for="minTime3">Seconds Min:</label>
+            <input type="number" id="minTime3" value="5">
+            <label for="maxTime3">Seconds Max:</label>
+            <input type="number" id="maxTime3" value="10">
+
+            <h3>Hold time interval</h3>
+            <label for="minTime4">Seconds Min:</label>
+            <input type="number" id="minTime4" value="10">
+            <label for="maxTime4">Seconds Max:</label>
+            <input type="number" id="maxTime4" value="25">
+
+            <h2>LETS GO!</h2>
+            <button id="startButton">FUCK ME UP</button>
+            <br>
+            <b id="hitTotal"></b>
+
+        </div>
+
+        <div id="game">
+            <div id="roundInfo"></div>
+            <div id="progressBar"></div>
+            <div id="timerDisplay"></div>
+            <button id="stopButton">STOP THE MADNESS</button>
+        </div>
+
+    </div>
+
+    <audio id="notificationSound" src="{{ url_for('static', filename='notification.mp3') }}"></audio>
+
+</body>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</html>
