@@ -91,7 +91,12 @@ function getRandomTime(min, max) {
 }
 
 function countdown(label, duration, onComplete) {
-    console.log(`Starting ${label} timer for ${duration}...`)
+    console.log(`Starting ${label} timer for ${duration}...`);
+
+    soundID = label.toLowerCase() + "Sound";
+    console.log(`Playing ${soundID}`);
+    var sound = document.getElementById(soundID);
+    sound.play();
 
     stateLabel.textContent = label;
     let timeLeft = duration;
@@ -105,9 +110,8 @@ function countdown(label, duration, onComplete) {
         if (timeLeft <= 0) {
             clearInterval(interval);
             progressBarFill.style.width = `0%`;
-            console.log(`${label} timer Complete...`)
-            var sound = document.getElementById('notificationSound');
-            sound.play();
+            console.log(`${label} timer Complete...`);
+
             onComplete();
         }
     }, 1000);
