@@ -98,12 +98,13 @@ function countdown(label, duration, onComplete) {
 
     interval = setInterval(() => {
         timeLeft--;
-        const progressPercentage = ((duration - timeLeft) / duration) * 100;
+        const progressPercentage = ((duration - timeLeft) / (duration  - 1)) * 100;
         progressBarFill.style.width = `${progressPercentage}%`;
         timerDisplay.textContent = `${timeLeft} seconds`;
 
         if (timeLeft <= 0) {
             clearInterval(interval);
+            progressBarFill.style.width = `0%`;
             console.log(`${label} timer Complete...`)
             var sound = document.getElementById('notificationSound');
             sound.play();
