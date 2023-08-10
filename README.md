@@ -39,5 +39,6 @@ This is a simple web app built with HTML, JavaScript, and Python to provide a cu
 - DOMPurify is used for client-side input sanitization to prevent XSS attacks.
 
 ## Contributing
+Notification sound from freesound.org https://freesound.org/people/suyashjemar/sounds/618608/
 
 Contributions are welcome! Feel free to fork this repository, make changes, and submit pull requests.
